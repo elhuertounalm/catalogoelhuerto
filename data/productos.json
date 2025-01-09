@@ -1,0 +1,58 @@
+[
+  {
+    "nombre": "Acelga",
+    "descripcion": "Acelga fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "vegetales",
+    "imagen": "img/acelga.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Albahaca",
+    "descripcion": "Acelga fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "vegetales",
+    "imagen": "img/Albahaca.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Arugula",
+    "descripcion": "Arugula fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "vegetales",
+    "imagen": "img/arugula.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Cebolla China",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "vegetales",
+    "imagen": "img/cebollachina.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Col Blanca",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/5.00",
+    "categoria": "vegetales",
+    "imagen": "img/colblanca.png",
+    "disponible": true
+  },
+  {
+    "nombre": "Kale",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/5.00",
+    "categoria": "vegetales",
+    "imagen": "img/kale.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Berenjena",
+    "descripcion": "Berenjena organica.",
+    "precio": "S/1.50",
+    "categoria": "frutas",
+    "imagen": "img/berenjena.jpg",
+    "disponible": false
+  }
+]
