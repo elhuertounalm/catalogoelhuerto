@@ -7,10 +7,10 @@
 
   <!-- Incluir Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- FontAwesome para los íconos de redes sociales -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-   
+
   <!-- Archivo CSS personalizado -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,8 +18,17 @@
   <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg navbar-light bg-success">
     <div class="container-fluid">
-      <!-- Título centrado -->
-      <a class="navbar-brand mx-auto text-white" href="#">Catálogo de Hortalizas Del Huerto</a>
+      <!-- Fila para los logos -->
+      <div class="d-flex justify-content-between w-100">
+        <!-- Logo izquierdo -->
+        <img src="ruta-del-logo-izquierdo.jpg" alt="Logo Izquierdo" class="img-fluid" style="max-width: 120px;">
+        
+        <!-- Título centrado -->
+        <a class="navbar-brand mx-auto text-white" href="#">Catálogo de Hortalizas Del Huerto</a>
+        
+        <!-- Logo derecho -->
+        <img src="ruta-del-logo-derecho.jpg" alt="Logo Derecho" class="img-fluid" style="max-width: 120px;">
+      </div>
     </div>
   </nav>
 
@@ -53,12 +62,12 @@
     <a href="https://facebook.com" target="_blank" class="btn btn-primary mx-2">
       <i class="fab fa-facebook-f"></i> Facebook
     </a>
-    
+
     <!-- Botón TikTok con fondo negro y texto blanco -->
     <a href="https://www.tiktok.com" target="_blank" class="btn btn-tiktok mx-2">
       <i class="fab fa-tiktok"></i> TikTok
     </a>
-    
+
     <!-- Botón Instagram -->
     <a href="https://instagram.com" target="_blank" class="btn btn-danger mx-2">
       <i class="fab fa-instagram"></i> Instagram
@@ -69,7 +78,7 @@
   <button id="generarPDF" class="btn btn-success mt-4">Generar PDF</button>
 
   <!-- Botón para alternar el modo oscuro -->
-  <button id="modoOscuro" class="btn btn-secon dary mt-4">Modo Oscuro</button>
+  <button id="modoOscuro" class="btn btn-secondary mt-4">Modo Oscuro</button>
 
   <!-- Pie de página -->
   <footer class="bg-success text-white text-center py-3 mt-5">
@@ -78,6 +87,19 @@
       <strong>Contacto:</strong><br>
       Teléfono: <a href="tel:+1234567890" class="text-white">+1 (234) 567-890</a><br>
       Correo: <a href="mailto:contacto@hortalizas.com" class="text-white">contacto@hortalizas.com</a>
+    </p>
+    <p>
+      <strong>Formas de Pago:</strong><br>
+      Banco 1: 123-456789-01<br>
+      Banco 2: 234-567890-12<br>
+      Banco 3: 345-678901-23<br>
+      Banco 4: 456-789012-34<br>
+      Banco 5: 567-890123-45<br>
+      Banco 6: 678-901234-56
+    </p>
+    <p>
+      <strong>Condiciones del Pedido:</strong><br>
+      Los pedidos se procesan en un plazo de 48 horas. No se aceptan devoluciones de productos perecederos. El cliente es responsable de verificar la calidad del producto al momento de la entrega.
     </p>
   </footer>
 
