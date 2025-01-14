@@ -13,109 +13,6 @@
 
   <!-- Archivo CSS personalizado -->
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* Reset básico */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    /* Estilo general */
-    body {
-        font-family: 'Arial', sans-serif;
-    }
-
-    /* Estilo de los productos */
-    .hortaliza {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .hortaliza:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .hortaliza img {
-        width: 100%;
-        height: auto;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .hortaliza h2 {
-        font-size: 1.2rem;
-        color: #66b147;
-        margin-top: 10px;
-    }
-
-    .hortaliza p {
-        color: #555;
-        font-size: 0.9rem;
-    }
-
-    .precio {
-        font-weight: bold;
-        color: #28a745;
-        margin-top: 10px;
-    }
-
-    /* Modo oscuro */
-    .bg-dark {
-        background-color: #343a40 !important;
-    }
-
-    .text-white {
-        color: #fff !important;
-    }
-
-    /* Estilos específicos para dispositivos móviles */
-    @media (max-width: 768px) {
-        .hortaliza h2 {
-            font-size: 1rem;
-        }
-
-        .hortaliza p {
-            font-size: 0.85rem;
-        }
-    }
-
-    /* Estilo para el botón de TikTok */
-    .btn-tiktok {
-        background-color: #000;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1rem;
-        font-weight: bold;
-        border-radius: 5px;
-        text-align: center;
-        transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .btn-tiktok i {
-        color: white;
-        margin-right: 5px;
-    }
-
-    .btn-tiktok:hover {
-        background-color: #333;
-        transform: translateY(-5px);
-    }
-
-    /* Estilo personalizado para reducir el tamaño de los afiches */
-    #afiches img {
-        max-width: 100%;  /* Ajustar el ancho al 100% */
-        height: auto;     /* Mantener la proporción de la imagen */
-        max-height: 500px; /* Limitar la altura máxima a 500px */
-        object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
-    }
-  </style>
 </head>
 <body class="bg-light">
   <!-- Barra de navegación -->
@@ -159,10 +56,28 @@
     </section>
   </main>
 
+  <!-- Botones de Redes Sociales -->
+  <div class="container text-center mt-4">
+    <!-- Botón Facebook -->
+    <a href="https://facebook.com" target="_blank" class="btn btn-primary mx-2">
+      <i class="fab fa-facebook-f"></i> Facebook
+    </a>
+
+    <!-- Botón TikTok con fondo negro y texto blanco -->
+    <a href="https://www.tiktok.com" target="_blank" class="btn btn-tiktok mx-2">
+      <i class="fab fa-tiktok"></i> TikTok
+    </a>
+
+    <!-- Botón Instagram -->
+    <a href="https://instagram.com" target="_blank" class="btn btn-danger mx-2">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+  </div>
+
   <!-- Sección de Afiches -->
   <section class="container mt-5">
     <h2 class="text-center">Afiches</h2>
-    <div id="carouselAfiches" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div id="carouselAfiches" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner" id="afiches">
         <!-- Los afiches se insertarán dinámicamente aquí -->
       </div>
@@ -177,13 +92,21 @@
     </div>
   </section>
 
+  <!-- Sección de Avisos -->
+  <section class="container mt-5">
+    <h2 class="text-center">Avisos</h2>
+    <ul id="avisos" class="list-group">
+      <!-- Los avisos se insertarán dinámicamente aquí -->
+    </ul>
+  </section>
+
   <!-- Botón para generar PDF -->
   <button id="generarPDF" class="btn btn-success mt-4">Generar PDF</button>
 
   <!-- Botón para alternar el modo oscuro -->
   <button id="modoOscuro" class="btn btn-secondary mt-4">Modo Oscuro</button>
 
-  <!-- Pie de página -->
+    <!-- Pie de página -->
   <footer class="bg-success text-white py-3 mt-5">
     <div class="container">
       <div class="row">
@@ -224,4 +147,3 @@
   <script src="js/script.js"></script>
 </body>
 </html>
-
