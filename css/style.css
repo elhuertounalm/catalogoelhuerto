@@ -19,6 +19,10 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto; /* Permitir altura flexible */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hortaliza:hover {
@@ -28,25 +32,34 @@ body {
 
 .hortaliza img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Tamaño uniforme para todas las imágenes */
+    object-fit: contain; /* Ajusta la imagen para que se muestre completa */
     border-bottom: 1px solid #ddd;
+    background-color: #f8f9fa; /* Fondo para los bordes vacíos (opcional) */
 }
 
+/* Título, descripción y precio */
 .hortaliza h2 {
     font-size: 1.2rem;
     color: #66b147;
     margin-top: 10px;
+    padding: 0 10px; /* Espaciado dentro del contenedor */
+    text-align: left; /* Alineación del título */
 }
 
 .hortaliza p {
     color: #555;
     font-size: 0.9rem;
+    padding: 0 10px; /* Espaciado dentro del contenedor */
+    text-align: left; /* Alineación de la descripción */
 }
 
 .precio {
     font-weight: bold;
     color: #28a745;
     margin-top: 10px;
+    padding: 0 10px; /* Espaciado dentro del contenedor */
+    text-align: left; /* Alineación del precio */
 }
 
 /* Modo oscuro */
@@ -60,12 +73,27 @@ body {
 
 /* Estilos específicos para dispositivos móviles */
 @media (max-width: 768px) {
+    .hortaliza img {
+        height: 150px; /* Reducir altura en pantallas pequeñas */
+    }
+
     .hortaliza h2 {
         font-size: 1rem;
     }
 
     .hortaliza p {
         font-size: 0.85rem;
+    }
+
+    .precio {
+        font-size: 1rem; /* Asegurar que el precio sea legible */
+    }
+
+    /* Contenedor de productos ajustado para pantallas pequeñas */
+    #productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+        gap: 15px; /* Espaciado entre productos */
     }
 }
 
@@ -90,4 +118,41 @@ body {
 .btn-tiktok:hover {
     background-color: #333;
     transform: translateY(-5px);
+}
+
+/* Estilo personalizado para reducir el tamaño de los afiches */
+#afiches img {
+    max-width: 100%;  /* Ajustar el ancho al 100% */
+    height: auto;     /* Mantener la proporción de la imagen */
+    max-height: 500px; /* Limitar la altura máxima a 500px */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+}
+
+/* Carrusel de Afiches */
+.carousel-inner {
+    max-height: 500px; /* Limitar la altura máxima del carrusel */
+}
+
+.carousel-item img {
+    max-width: 100%;   /* Asegurar que las imágenes no se desborden */
+    height: auto;
+}
+
+/* Estilo para las flechas de desplazamiento del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000; /* Cambiar el color de las flechas a negro */
+}
+
+/* Añadir un intervalo de desplazamiento automático al carrusel */
+#carouselAfiches {
+    animation: slideInterval 5s infinite;
+}
+
+@keyframes slideInterval {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { opacity: 1; }
+    75% { opacity: 0; }
+    100% { opacity: 0; }
 }
