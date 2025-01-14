@@ -23,6 +23,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const div = document.createElement("div");
         div.classList.add("col-md-4", "col-sm-6", "col-12");
 
+    // Cargar avisos desde el archivo JSON
+    fetch('data/avisos.json')
+    .then(response => response.json())
+    .then(avisos => mostrarAvisos(avisos))
+    .catch(error => console.error('Error al cargar los avisos:', error));
+
+    // Cargar afiches desde el archivo JSON
+    fetch('data/afiches.json')
+    .then(response => response.json())
+    .then(afiches => mostrarAfiches(afiches))
+    .catch(error => console.error('Error al cargar los afiches:', error));
+
         div.innerHTML = `
           <div class="hortaliza">
             <img src="${producto.imagen}" alt="${producto.nombre}">
@@ -124,6 +136,39 @@ document.addEventListener('DOMContentLoaded', function() {
       // Descargar el archivo PDF
       doc.save("catalogo_hortalizas.pdf");
     });
+
+
+  // Función para mostrar avisos
+  function mostrarAvisos(avisos) {
+    const contenedorAvisos = document.getElementById('avisos');
+    contenedorAvisos.innerHTML = '';
+
+    avisos.forEach(aviso => {
+      const item = document.createElement('li');
+      item.className = 'list-group-item';
+      item.innerHTML = `
+        <strong>${aviso.fecha}:</strong> ${aviso.texto}
+      `;
+      contenedorAvisos.appendChild(item);
+    });
+  }
+
+  // Función para mostrar afiches
+  function mostrarAfiches(afiches) {
+    const contenedorAfiches = document.getElementById('afiches');
+    contenedorAfiches.innerHTML = '';
+
+    afiches.forEach((afiche, index) => {
+      const item = document.createElement('div');
+      item.className = `carousel-item${index === 0 ? ' active' : ''}`;
+      item.innerHTML = `
+        <img src="${afiche.imagen}" class="d-block w-100" alt="${afiche.descripcion}">
+        <div class="carousel-caption d-none d-md-block">
+          <p>${afiche.descripcion}</p>
+        </div>`;
+      contenedorAfiches.appendChild(item);
+    });
+  }
 
     // Alternar modo oscuro
     const botonModoOscuro = document.getElementById("modoOscuro");
