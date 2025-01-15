@@ -10,6 +10,89 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+/* Encabezado: Logos y título */
+header {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en filas adicionales */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 10px; /* Espaciado entre logos y título */
+    padding: 10px;
+}
+
+header img {
+    max-width: 80px; /* Limitar el tamaño máximo del logo */
+    height: auto; /* Mantener proporción */
+    flex-shrink: 0; /* Evitar que los logos se reduzcan demasiado */
+}
+
+header h1 {
+    font-size: 1.5rem; /* Tamaño flexible del título */
+    text-align: center;
+    margin: 0;
+    flex-basis: 100%; /* Ocupar toda la fila si es necesario */
+    word-wrap: break-word; /* Permitir que el texto se ajuste */
+    padding: 0 10px; /* Espaciado lateral para evitar que se corte el texto */
+}
+
+/* Redes sociales */
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los botones pasen a la siguiente línea si es necesario */
+    justify-content: center; /* Centrar los botones horizontalmente */
+    gap: 15px; /* Espaciado entre botones */
+    margin-top: 20px;
+    padding: 0 10px; /* Espaciado lateral para pantallas más pequeñas */
+}
+
+.redes-sociales .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px; /* Tamaño cómodo del botón */
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    flex: none; /* Evitar que los botones se estiren */
+    width: 120px; /* Tamaño consistente para todos */
+    height: 40px; /* Altura consistente para todos */
+    transition: background-color 0.3s, transform 0.3s; /* Añadir la transición para movimiento */
+}
+
+/* Estilo para los botones de redes sociales */
+.btn-tiktok,
+.btn-facebook,
+.btn-instagram {
+    background-color: #000;
+    color: white;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s; /* Añadir la transición para movimiento */
+}
+
+/* Estilo para los botones al hacer hover */
+.btn-tiktok:hover,
+.btn-facebook:hover,
+.btn-instagram:hover {
+    transform: translateY(-5px); /* Movimiento hacia arriba al acercar el puntero */
+}
+
+/* Estilo para los botones específicos de cada red social */
+.btn-facebook {
+    background-color: #1877f2;
+}
+
+.btn-instagram {
+    background-color: #c13535;
+}
+
+/* Íconos de las redes sociales */
+.redes-sociales .btn i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+    font-size: 1.2rem;
+    color: inherit;
+}
+
 /* Estilo de los productos */
 .hortaliza {
     background-color: #fff;
@@ -71,55 +154,6 @@ body {
     color: #fff !important;
 }
 
-/* Estilos específicos para dispositivos móviles */
-@media (max-width: 768px) {
-    .hortaliza img {
-        height: 150px; /* Reducir altura en pantallas pequeñas */
-    }
-
-    .hortaliza h2 {
-        font-size: 1rem;
-    }
-
-    .hortaliza p {
-        font-size: 0.85rem;
-    }
-
-    .precio {
-        font-size: 1rem; /* Asegurar que el precio sea legible */
-    }
-
-    /* Contenedor de productos ajustado para pantallas pequeñas */
-    #productos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
-        gap: 15px; /* Espaciado entre productos */
-    }
-}
-
-/* Estilo para el botón de TikTok */
-.btn-tiktok {
-    background-color: #000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-tiktok i {
-    color: white;
-    margin-right: 5px;
-}
-
-.btn-tiktok:hover {
-    background-color: #333;
-    transform: translateY(-5px);
-}
-
 /* Estilo personalizado para reducir el tamaño de los afiches */
 #afiches img {
     max-width: 100%;  /* Ajustar el ancho al 100% */
@@ -155,4 +189,49 @@ body {
     50% { opacity: 1; }
     75% { opacity: 0; }
     100% { opacity: 0; }
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ajustes para el encabezado */
+    header img {
+        max-width: 60px; /* Ajustar tamaño del logo en pantallas pequeñas */
+    }
+
+    header h1 {
+        font-size: 1.2rem; /* Reducir tamaño del título */
+        padding: 0 10px; /* Espaciado lateral para evitar cortes */
+        word-wrap: break-word; /* Permitir que el título se ajuste mejor en pantallas pequeñas */
+    }
+
+    /* Ajustes para botones de redes sociales */
+    .redes-sociales .btn {
+        width: 100px; /* Tamaño más pequeño para pantallas pequeñas */
+        height: 35px; /* Ajustar altura en pantallas pequeñas */
+        font-size: 0.8rem;
+    }
+
+    /* Ajustes para productos */
+    .hortaliza img {
+        height: 150px; /* Reducir altura en pantallas pequeñas */
+    }
+
+    .hortaliza h2 {
+        font-size: 1rem;
+    }
+
+    .hortaliza p {
+        font-size: 0.85rem;
+    }
+
+    .precio {
+        font-size: 1rem; /* Asegurar que el precio sea legible */
+    }
+
+    /* Contenedor de productos ajustado para pantallas pequeñas */
+    #productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+        gap: 15px; /* Espaciado entre productos */
+    }
 }
