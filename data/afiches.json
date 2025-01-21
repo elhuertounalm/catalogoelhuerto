@@ -1,11 +1,15 @@
 [
     {
-      "imagen": "img/acelga.jpg",
-      "descripcion": "Campaña de productos orgánicos."
+      "imagen": "img/afiches/agroferiascampesinas.jpeg",
+      "descripcion": "."
     },
     {
-      "imagen": "img/kale.jpg",
-      "descripcion": "Promoción de verano."
+      "imagen": "img/afiches/ventapuerta.jpeg",
+      "descripcion": "."
+    },
+    {
+      "imagen": "img/afiches/centrodeventa.jpeg",
+      "descripcion": "."
     }
   ]
   
