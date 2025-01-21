@@ -3,48 +3,208 @@
     "nombre": "Acelga",
     "descripcion": "Acelga fresca y saludable.",
     "precio": "S/3.00",
-    "categoria": "vegetales",
-    "imagen": "img/acelga.jpg",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/acelga.jpg",
     "disponible": true
   },
   {
     "nombre": "Albahaca",
     "descripcion": "Acelga fresca y saludable.",
     "precio": "S/3.00",
-    "categoria": "vegetales",
-    "imagen": "img/Albahaca.jpg",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/Albahaca.jpg",
     "disponible": true
   },
   {
     "nombre": "Arugula",
     "descripcion": "Arugula fresca y saludable.",
     "precio": "S/3.00",
-    "categoria": "vegetales",
-    "imagen": "img/arugula.jpg",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/arugula.jpg",
     "disponible": true
   },
   {
     "nombre": "Cebolla China",
     "descripcion": "fresca y saludable.",
     "precio": "S/3.00",
-    "categoria": "vegetales",
-    "imagen": "img/cebollachina.jpg",
-    "disponible": true
+    "categoria": "hortalizas",
+    "imagen": "img/productos/cebollachina.jpg",
+    "disponible": false
   },
   {
     "nombre": "Col Blanca",
     "descripcion": "fresca y saludable.",
     "precio": "S/5.00",
-    "categoria": "vegetales",
-    "imagen": "img/colblanca.png",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/colblanca.jpeg",
     "disponible": true
   },
   {
     "nombre": "Kale",
     "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/kale.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Aji amarillo",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/ajiamarillo.webp",
+    "disponible": true
+  },
+  {
+    "nombre": "Almaciguera",
+    "descripcion": "80 plantines.",
+    "precio": "S/35.00",
+    "categoria": "biohuerto",
+    "imagen": "img/productos/almacigos.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Apio",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/apio.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Betarraga",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/betarraga.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Hierbas frescas",
+    "descripcion": "atado.",
+    "precio": "S/2.00",
+    "categoria": "Herbaceas",
+    "imagen": "img/productos/hierbasfrescas.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "hierbas mix infusión y cocina",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "Herbaceas",
+    "imagen": "img/productos/hierbasmixinfusionycocina.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Kale",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/kale.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Lechuga",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/lechuga.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Lechuga mix",
+    "descripcion": "fresca y saludable.",
     "precio": "S/5.00",
-    "categoria": "vegetales",
-    "imagen": "img/kale.jpg",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/lechugamix.webp",
+    "disponible": true
+  },
+  {
+    "nombre": "Moringa",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/5.00",
+    "categoria": "Herbaceas",
+    "imagen": "img/productos/moringa.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Nabo",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/nabo.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Pepino holandez",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/pepinoholandes.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Pepino pickles",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/5.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/pepinopickles.webp",
+    "disponible": true
+  },
+  {
+    "nombre": "Pimiento",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/1.50",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/pimiento.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Plantas",
+    "descripcion": "Huaranguay, Estragon, Hierba buena, Mejorana, Menta comun, Menta negra, Oregano, Romero, Salvia, Aguaymanto, Lirio, Lengua de suegra y Nardo.",
+    "precio": "S/10.00",
+    "categoria": "biohuerto",
+    "imagen": "img/productos/plantas.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Tierra preparada",
+    "descripcion": "Bolsa chica",
+    "precio": "S/4.00",
+    "categoria": "biohuerto",
+    "imagen": "img/productos/tierrapreparada.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Tomate",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/7.50",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/tomate.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Verduras micro mix",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/5.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/verdurasmicromix.webp",
+    "disponible": true
+  },
+  {
+    "nombre": "Zanahoria",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.50",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/zanahoria.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Zapallo criollo",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.50",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/zapallocriollo.png",
     "disponible": true
   },
   {
@@ -52,7 +212,7 @@
     "descripcion": "Berenjena organica.",
     "precio": "S/1.50",
     "categoria": "frutas",
-    "imagen": "img/berenjena.jpg",
-    "disponible": false
+    "imagen": "img/productos/berenjena.jpg",
+    "disponible": true
   }
 ]
