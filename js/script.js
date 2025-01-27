@@ -1,318 +1,238 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+document.addEventListener('DOMContentLoaded', function() {
+  let productos = [];
+  const contenedorProductos = document.getElementById("productos");
+  const inputBusqueda = document.getElementById("buscar");
+  const selectFiltro = document.getElementById("filtro");
 
-/* Estilo general */
-body {
-    font-family: 'Arial', sans-serif;
-}
+  // Cargar los productos desde el archivo JSON
+  fetch('data/productos.json')
+    .then(response => response.json())
+    .then(data => {
+      // Filtrar productos disponibles
+      productos = data.filter(producto => producto.disponible); // Solo productos disponibles
+      mostrarProductos(productos);  // Mostrar todos los productos disponibles al inicio
+    })
+    .catch(error => {
+      console.error("Error al cargar los productos:", error);
+    });
 
-/* Encabezado: Logos y título */
-header {
-    display: flex;
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten en filas adicionales */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
-    gap: 10px; /* Espaciado entre logos y título */
-    padding: 10px;
-}
+  // Cargar avisos desde el archivo JSON
+  fetch('data/avisos.json')
+    .then(response => response.json())
+    .then(avisos => mostrarAvisos(avisos))
+    .catch(error => console.error('Error al cargar los avisos:', error));
 
-header img {
-    max-width: 80px; /* Limitar el tamaño máximo del logo */
-    height: auto; /* Mantener proporción */
-    flex-shrink: 0; /* Evitar que los logos se reduzcan demasiado */
-}
+  // Cargar afiches desde el archivo JSON
+  fetch('data/afiches.json')
+    .then(response => response.json())
+    .then(afiches => mostrarAfiches(afiches))
+    .catch(error => console.error('Error al cargar los afiches:', error));
 
-header h1 {
-    font-size: 1.5rem; /* Tamaño flexible del título */
-    text-align: center;
-    margin: 0;
-    flex-basis: 100%; /* Ocupar toda la fila si es necesario */
-    word-wrap: break-word; /* Permitir que el texto se ajuste */
-    padding: 0 10px; /* Espaciado lateral para evitar que se corte el texto */
-}
+  // Función para mostrar los productos
+  function mostrarProductos(productosFiltrados) {
+    contenedorProductos.innerHTML = '';
+    productosFiltrados.forEach(producto => {
+      const div = document.createElement("div");
+      div.classList.add("col-md-4", "col-sm-6", "col-12");
 
-/* Redes sociales */
-.redes-sociales {
-    display: flex;
-    flex-wrap: wrap; /* Permitir que los botones pasen a la siguiente línea si es necesario */
-    justify-content: center; /* Centrar los botones horizontalmente */
-    gap: 15px; /* Espaciado entre botones */
-    margin-top: 20px;
-    padding: 0 10px; /* Espaciado lateral para pantallas más pequeñas */
-}
+      div.innerHTML = `
+        <div class="hortaliza">
+          <img src="${producto.imagen}" alt="${producto.nombre}">
+          <h2>${producto.nombre}</h2>
+          <p>${producto.descripcion}</p>
+          <p class="precio">${producto.precio}</p>
+        </div>
+      `;
 
-.redes-sociales .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px; /* Tamaño cómodo del botón */
-    font-size: 0.9rem;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
-    flex: none; /* Evitar que los botones se estiren */
-    width: 120px; /* Tamaño consistente para todos */
-    height: 40px; /* Altura consistente para todos */
-    transition: background-color 0.3s, transform 0.3s; /* Añadir la transición para movimiento */
-}
+      contenedorProductos.appendChild(div);
+    });
+  }
 
-/* Estilo para los botones de redes sociales */
-.btn-tiktok,
-.btn-facebook,
-.btn-instagram {
-    background-color: #000;
-    color: white;
-    border: none;
-    transition: background-color 0.3s, transform 0.3s; /* Añadir la transición para movimiento */
-}
+  // Filtrar por búsqueda o categoría
+  inputBusqueda.addEventListener('input', function() {
+    const busqueda = inputBusqueda.value.toLowerCase();
+    const productosFiltrados = productos.filter(producto =>
+      producto.nombre.toLowerCase().includes(busqueda) || producto.descripcion.toLowerCase().includes(busqueda)
+    );
+    mostrarProductos(productosFiltrados);
+  });
 
-/* Estilo para los botones al hacer hover */
-.btn-tiktok:hover,
-.btn-facebook:hover,
-.btn-instagram:hover {
-    transform: translateY(-5px); /* Movimiento hacia arriba al acercar el puntero */
-}
+  // Filtrar por categoría
+  selectFiltro.addEventListener('change', function() {
+    const filtro = selectFiltro.value;
 
-/* Estilo para los botones específicos de cada red social */
-.btn-facebook {
-    background-color: #1877f2;
-}
+    let productosFiltrados = productos;
 
-.btn-instagram {
-    background-color: #c13535;
-}
-
-/* Íconos de las redes sociales */
-.redes-sociales .btn i {
-    margin-right: 5px; /* Espacio entre el ícono y el texto */
-    font-size: 1.2rem;
-    color: inherit;
-}
-
-/* Estilo de los productos */
-.hortaliza {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: auto; /* Permitir altura flexible */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.hortaliza:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.hortaliza img {
-    width: 100%;
-    height: 200px; /* Tamaño uniforme para todas las imágenes */
-    object-fit: contain; /* Ajusta la imagen para que se muestre completa */
-    border-bottom: 1px solid #ddd;
-    background-color: #f8f9fa; /* Fondo para los bordes vacíos (opcional) */
-}
-
-/* Título, descripción y precio */
-.hortaliza h2 {
-    font-size: 1.2rem;
-    color: #66b147;
-    margin-top: 10px;
-    padding: 0 10px; /* Espaciado dentro del contenedor */
-    text-align: left; /* Alineación del título */
-}
-
-.hortaliza p {
-    color: #555;
-    font-size: 0.9rem;
-    padding: 0 10px; /* Espaciado dentro del contenedor */
-    text-align: left; /* Alineación de la descripción */
-}
-
-.precio {
-    font-weight: bold;
-    color: #28a745;
-    margin-top: 10px;
-    padding: 0 10px; /* Espaciado dentro del contenedor */
-    text-align: left; /* Alineación del precio */
-}
-
-/* Modo oscuro */
-.bg-dark {
-    background-color: #343a40 !important;
-}
-
-.text-white {
-    color: #fff !important;
-}
-
-/* Estilo personalizado para los afiches */
-#afiches {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres afiches por fila en pantallas grandes */
-    gap: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-    justify-items: center;
-}
-
-#afiches .afiche {
-    width: 408px; /* Establecer un ancho fijo de 408px para los afiches */
-    height: 612px; /* Establecer una altura fija de 612px para los afiches */
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#afiches .afiche:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-#afiches .afiche img {
-    width: 100%;
-    height: 100%;  /* Permitir que la imagen ocupe todo el espacio disponible */
-    object-fit: contain; /* Asegura que la imagen se mantenga proporcional y se ajuste sin recortarse */
-}
-
-/* Estilo de la flecha en el carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #000; /* Color de la flecha */
-    border-radius: 50%; /* Para darle forma redonda */
-    width: 40px; /* Ancho de la flecha */
-    height: 40px; /* Alto de la flecha */
-    border: 3px solid #000; /* Aumentar grosor del borde de la flecha */
-}
-
-/* Flecha en modo oscuro */
-.bg-dark .carousel-control-prev-icon,
-.bg-dark .carousel-control-next-icon {
-    background-color: #000000; /* Flecha blanca en el modo oscuro */
-    border: 3px solid #ffffff; /* Borde blanco en el modo oscuro */
-}
-
-/* Modificar el tamaño y grosor de las flechas en dispositivos pequeños */
-@media (max-width: 768px) {
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        width: 50px; /* Aumentar tamaño de la flecha en pantallas pequeñas */
-        height: 50px; /* Aumentar altura de la flecha en pantallas pequeñas */
-        border-width: 4px; /* Grosor adicional para las flechas en pantallas pequeñas */
-    }
-}
-
-/* Estilos específicos para dispositivos móviles */
-@media (max-width: 768px) {
-    /* Ajustes para los afiches */
-    #afiches {
-        grid-template-columns: repeat(2, 1fr); /* Dos afiches por fila en pantallas pequeñas */
+    if (filtro) {
+      // Filtrar productos por categoría
+      productosFiltrados = productos.filter(producto => 
+        producto.categoria && producto.categoria.toLowerCase() === filtro.toLowerCase()
+      );
     }
 
-    /* Ajustes para los afiches individuales */
-    #afiches .afiche {
-        width: 250px; /* Ajustar el tamaño para pantallas pequeñas */
-        height: 375px; /* Ajustar la altura proporcionalmente */
+    mostrarProductos(productosFiltrados);
+  });
+
+  // Funcionalidad para generar el PDF
+  document.getElementById("generarPDF").addEventListener("click", function() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Comprobar si está activado el modo oscuro
+    const modoOscuro = document.body.classList.contains("bg-dark");
+
+    // Configurar fondo y color de texto según el modo
+    if (modoOscuro) {
+      doc.setFillColor(40, 40, 40); // Fondo oscuro
+      doc.rect(0, 0, 210, 297, 'F'); // Establecer el fondo para toda la página
+      doc.setTextColor(255, 255, 255); // Texto blanco
+    } else {
+      doc.setFillColor(255, 255, 255); // Fondo blanco
+      doc.rect(0, 0, 210, 297, 'F'); // Establecer el fondo para toda la página
+      doc.setTextColor(0, 0, 0); // Texto negro
     }
 
-    /* Ajustes para botones de redes sociales */
-    .redes-sociales .btn {
-        width: 100px; /* Tamaño más pequeño para pantallas pequeñas */
-        height: 35px; /* Ajustar altura en pantallas pequeñas */
-        font-size: 0.8rem;
+    // Agregar título
+    doc.setFontSize(22);
+    doc.text("Catálogo de Hortalizas", 10, 20);
+
+    // Ajustar la tabla
+    const startY = 30;
+    const marginX = 10;
+    let y = startY;
+
+    // Crear encabezados de la tabla
+    doc.setFontSize(14);
+    doc.text("Nombre", marginX, y);
+    doc.text("Precio", marginX + 60, y);
+    doc.text("Descripción", marginX + 120, y);
+
+    // Dibujar una línea debajo de los encabezados
+    y += 10;
+    doc.line(marginX, y, 200, y);
+
+    // Función para ajustar las descripciones a la página
+    const maxWidth = 85;  // El ancho máximo para la descripción (ajustado para que encaje mejor)
+    const lineHeight = 6;  // Altura entre líneas de texto
+
+    // Agregar productos en la tabla
+    productos.forEach(producto => {
+      if (y > 270) {  // Si la página está llena, añadir una nueva página
+        doc.addPage();
+        if (modoOscuro) {
+          doc.setFillColor(40, 40, 40);
+          doc.rect(0, 0, 210, 297, 'F');
+          doc.setTextColor(255, 255, 255);
+        } else {
+          doc.setFillColor(255, 255, 255);
+          doc.rect(0, 0, 210, 297, 'F');
+          doc.setTextColor(0, 0, 0);
+        }
+        y = startY;
+      }
+
+      doc.setFontSize(12);
+      doc.text(producto.nombre, marginX, y);
+      doc.text(producto.precio, marginX + 60, y);
+
+      // Ajustar la descripción para que se ajuste en el espacio disponible
+      const lines = doc.splitTextToSize(producto.descripcion, maxWidth);  // Divide el texto en líneas
+
+      // Ajustar el espaciado entre líneas si es necesario
+      y += lineHeight;
+      lines.forEach(line => {
+        doc.text(line, marginX + 120, y);
+        y += lineHeight;
+      });
+    });
+
+    // Asegurarse de que siempre haya espacio para los detalles adicionales
+    if (y > 270) {
+      doc.addPage();
+      y = 20;
     }
 
-    /* Ajustes para productos */
-    .hortaliza img {
-        height: 150px; /* Reducir altura en pantallas pequeñas */
-    }
+    // Agregar las redes sociales y otros detalles al final
+    doc.setFontSize(14);
+    doc.text("Síguenos en nuestras redes sociales:", marginX, y);
+    y += 10;
+    doc.setFontSize(12);
+    doc.text("Facebook: https://facebook.com", marginX, y);
+    y += 5;
+    doc.text("TikTok: https://tiktok.com", marginX, y);
+    y += 5;
+    doc.text("Instagram: https://instagram.com", marginX, y);
 
-    .hortaliza h2 {
-        font-size: 1rem;
-    }
+    // Agregar cuentas bancarias y contacto
+    y += 10;
+    doc.setFontSize(14);
+    doc.text("Información de contacto y cuentas bancarias:", marginX, y);
+    y += 10;
+    doc.setFontSize(12);
+    doc.text("Cuenta Bancaria 1: 1234567890", marginX, y);
+    y += 5;
+    doc.text("Cuenta Bancaria 2: 9876543210", marginX, y);
+    y += 5;
+    doc.text("Teléfono: 123-456-789", marginX, y);
+    y += 5;
+    doc.text("Correo: contacto@empresa.com", marginX, y);
 
-    .hortaliza p {
-        font-size: 0.85rem;
-    }
+    // Agregar los Términos y Condiciones
+    y += 15;
+    doc.setFontSize(14);
+    doc.text("Términos y Condiciones", marginX, y);
+    y += 10;
+    doc.setFontSize(12);
+    doc.text("1. Los productos son solo para uso personal.", marginX, y);
+    y += 5;
+    doc.text("2. Los precios están sujetos a cambios sin previo aviso.", marginX, y);
+    y += 5;
+    doc.text("3. Las compras realizadas no son reembolsables.", marginX, y);
+    y += 5;
+    doc.text("4. La empresa no se hace responsable por daños derivados del uso incorrecto de los productos.", marginX, y);
+    y += 5;
+    doc.text("5. Todos los productos están sujetos a disponibilidad de stock.", marginX, y);
 
-    .precio {
-        font-size: 1rem; /* Asegurar que el precio sea legible */
-    }
+    // Descargar el archivo PDF
+    doc.save("catalogo_hortalizas.pdf");
+  });
 
-    /* Contenedor de productos ajustado para pantallas pequeñas */
-    #productos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
-        gap: 15px; /* Espaciado entre productos */
-    }
+  // Función para mostrar avisos
+  function mostrarAvisos(avisos) {
+    const contenedorAvisos = document.getElementById('avisos');
+    contenedorAvisos.innerHTML = '';
 
-    /* Asegurar que los afiches en el carrusel ocupen toda la pantalla */
-    #carouselAfiches .carousel-item img {
-        width: 100%; /* Expandir la imagen al 100% del ancho */
-        height: auto; /* Mantener proporciones */
-    }
+    avisos.forEach(aviso => {
+      const item = document.createElement('li');
+      item.className = 'list-group-item';
+      item.innerHTML = ` 
+        <strong>${aviso.fecha}:</strong> ${aviso.texto}
+      `;
+      contenedorAvisos.appendChild(item);
+    });
+  }
 
-    #carouselAfiches {
-        max-width: 100%; /* Asegurar que el carrusel no se salga de la pantalla */
-    }
+  // Función para mostrar afiches
+  function mostrarAfiches(afiches) {
+    const contenedorAfiches = document.getElementById('afiches');
+    contenedorAfiches.innerHTML = '';
 
-    #carouselAfiches .carousel-inner {
-        display: flex; /* Asegurar alineación */
-        align-items: center; /* Centrar verticalmente */
-    }
-}
+    afiches.forEach((afiche, index) => {
+      const item = document.createElement('div');
+      item.className = `carousel-item${index === 0 ? ' active' : ''}`;
+      item.innerHTML = `
+        <img src="${afiche.imagen}" class="d-block w-100" alt="${afiche.descripcion}">
+        <div class="carousel-caption d-none d-md-block">
+          <p>${afiche.descripcion}</p>
+        </div>`;
+      contenedorAfiches.appendChild(item);
+    });
+  }
 
-/* Estilo para los botones de WhatsApp y correo */
-.btn-whatsapp {
-    background-color: #25D366; /* Color de fondo de WhatsApp */
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-whatsapp:hover {
-    background-color: #128C7E; /* Color de fondo en hover */
-    transform: translateY(-5px); /* Efecto de elevación */
-}
-
-.btn-email {
-    background-color: #EA4335; /* Color de fondo de Gmail */
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-email:hover {
-    background-color: #D93025; /* Color de fondo en hover */
-    transform: translateY(-5px); /* Efecto de elevación */
-}
-
-.btn i {
-    margin-right: 8px; /* Espacio entre el icono y el texto */
-    font-size: 1.2rem;
-}
+  // Alternar modo oscuro
+  const botonModoOscuro = document.getElementById("modoOscuro");
+  botonModoOscuro.addEventListener("click", function() {
+    document.body.classList.toggle("bg-dark");
+    document.body.classList.toggle("text-white");
+  });
+});
