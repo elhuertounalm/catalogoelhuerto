@@ -102,27 +102,20 @@
     </ul>
   </section>
 
-  <!-- Botones -->
-  <div class="container text-center mt-4">
-    <!-- Botón para generar PDF -->
-    <button id="generarPDF" class="btn btn-success mt-4">Generar PDF</button>
-
-    <!-- Botón para alternar el modo oscuro -->
-    <button id="modoOscuro" class="btn btn-secondary mt-4">Modo Oscuro</button>
-  </div>
-
   <!-- Pie de página -->
   <footer class="bg-success text-white py-3 mt-5">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-3">
-          <h5>Separa tu pedido por el siguiente Contacto en el WhatsApp</h5>
-          <a href="https://wa.me/999308582" class="btn btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> 999308582
-          </a>
-          <a href="mailto:huerto1@lamolina.edu.pe" class="btn btn-email">
-            <i class="fas fa-envelope"></i> huerto1@lamolina.edu.pe
-          </a>
+          <h5>Contacto</h5>
+          <div class="d-flex flex-column gap-2">
+            <a href="https://wa.me/999308582" class="btn btn-outline-light btn-sm">
+              <i class="fab fa-whatsapp"></i> 999 308 582
+            </a>
+            <a href="mailto:huerto1@lamolina.edu.pe" class="btn btn-outline-light btn-sm">
+              <i class="fas fa-envelope"></i> huerto1@lamolina.edu.pe
+            </a>
+          </div>
         </div>
         <div class="col-md-4 mb-3">
           <h5>Formas de pago a nombre de: Fundación para el Desarrollo Agrario</h5>
@@ -144,15 +137,11 @@
           </p>
         </div>
       </div>
-      <div class="text-center mt-3">
-        <p>&copy; 2025 Catálogo de Hortalizas.</p>
-      </div>
     </div>
   </footer>
 
   <!-- Incluir Bootstrap JS y jsPDF -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>
