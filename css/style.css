@@ -115,11 +115,11 @@ header h1 {
 
 .hortaliza img {
     width: 100%; /* Ocupar todo el ancho del contenedor */
-    aspect-ratio: 1 / 1; /* Mantener una relación de aspecto cuadrada */
+    height: 250px; /* Altura fija para PC */
     object-fit: cover; /* Cubrir el contenedor sin deformarse */
+    object-position: center; /* Centrar la imagen vertical y horizontalmente */
     border-bottom: 1px solid #ddd;
     background-color: #f8f9fa; /* Fondo para los bordes vacíos */
-    max-height: 200px; /* Limitar la altura máxima de las imágenes */
 }
 
 /* Título, descripción y precio */
@@ -222,8 +222,10 @@ header h1 {
 
     /* Ajustes para productos */
     .hortaliza img {
-        aspect-ratio: 1 / 1; /* Mantener relación cuadrada en móviles */
-        max-height: 150px; /* Reducir altura máxima en móviles */
+        height: 180px; /* Altura fija para móviles */
+        object-fit: cover; /* Cubrir el contenedor sin deformarse */
+        width: 110%; /* Aumentar el ancho del contenedor de imágenes */
+        margin-left: -5%; /* Centrar el contenedor */
     }
 
     .hortaliza h2 {
@@ -244,6 +246,12 @@ header h1 {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
         padding: 0 10px;
+    }
+
+    /* Ajustar el ancho del contenedor de productos en móviles */
+    .hortaliza {
+        width: 110%; /* Aumentar el ancho del contenedor */
+        margin-left: -5%; /* Centrar el contenedor */
     }
 
     /* Asegurar que los afiches en el carrusel ocupen toda la pantalla */
@@ -284,4 +292,16 @@ header h1 {
 .btn-sm {
     padding: 5px 10px;
     font-size: 0.9rem;
+}
+
+/* Ajustes para PC */
+@media (min-width: 768px) {
+    .hortaliza img {
+        height: 300px; /* Aumentar la altura en PC */
+        object-fit: cover; /* Cubrir el contenedor sin deformarse */
+    }
+
+    #productos {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en PC */
+    }
 }
