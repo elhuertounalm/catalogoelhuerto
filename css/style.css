@@ -13,51 +13,51 @@ body {
 /* Encabezado: Logos y título */
 header {
     display: flex;
-    flex-wrap: wrap; /* Permitir que los elementos se ajusten en filas adicionales */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
-    gap: 10px; /* Espaciado entre logos y título */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     padding: 10px;
 }
 
 header img {
-    max-width: 80px; /* Limitar el tamaño máximo del logo */
-    height: auto; /* Mantener proporción */
-    flex-shrink: 0; /* Evitar que los logos se reduzcan demasiado */
+    max-width: 80px;
+    height: auto;
+    flex-shrink: 0;
 }
 
 header h1 {
-    font-size: 1.5rem; /* Tamaño flexible del título */
+    font-size: 1.5rem;
     text-align: center;
     margin: 0;
-    flex-basis: 100%; /* Ocupar toda la fila si es necesario */
-    word-wrap: break-word; /* Permitir que el texto se ajuste */
-    padding: 0 10px; /* Espaciado lateral para evitar que se corte el texto */
+    flex-basis: 100%;
+    word-wrap: break-word;
+    padding: 0 10px;
 }
 
 /* Redes sociales */
 .redes-sociales {
     display: flex;
-    flex-wrap: wrap; /* Permitir que los botones pasen a la siguiente línea si es necesario */
-    justify-content: center; /* Centrar los botones horizontalmente */
-    gap: 15px; /* Espaciado entre botones */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     margin-top: 20px;
-    padding: 0 10px; /* Espaciado lateral para pantallas más pequeñas */
+    padding: 0 10px;
 }
 
 .redes-sociales .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px; /* Tamaño cómodo del botón */
+    padding: 10px 20px;
     font-size: 0.9rem;
     font-weight: bold;
     border-radius: 5px;
     text-align: center;
-    flex: none; /* Evitar que los botones se estiren */
-    width: 120px; /* Tamaño consistente para todos */
-    height: 40px; /* Altura consistente para todos */
-    transition: background-color 0.3s, transform 0.3s; /* Añadir la transición para movimiento */
+    flex: none;
+    width: 120px;
+    height: 40px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 /* Estilo para los botones de redes sociales */
@@ -67,14 +67,14 @@ header h1 {
     background-color: #000;
     color: white;
     border: none;
-    transition: background-color 0.3s, transform 0.3s; /* Añadir la transición para movimiento */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 /* Estilo para los botones al hacer hover */
 .btn-tiktok:hover,
 .btn-facebook:hover,
 .btn-instagram:hover {
-    transform: translateY(-5px); /* Movimiento hacia arriba al acercar el puntero */
+    transform: translateY(-5px);
 }
 
 /* Estilo para los botones específicos de cada red social */
@@ -88,7 +88,7 @@ header h1 {
 
 /* Íconos de las redes sociales */
 .redes-sociales .btn i {
-    margin-right: 5px; /* Espacio entre el ícono y el texto */
+    margin-right: 5px;
     font-size: 1.2rem;
     color: inherit;
 }
@@ -98,11 +98,11 @@ header h1 {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
+    overflow: hidden; /* Evitar que las imágenes se desborden */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: auto; /* Permitir altura flexible */
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -114,11 +114,12 @@ header h1 {
 }
 
 .hortaliza img {
-    width: 100%;
-    height: 200px; /* Tamaño uniforme para todas las imágenes */
-    object-fit: contain; /* Ajusta la imagen para que se muestre completa */
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    aspect-ratio: 1 / 1; /* Mantener una relación de aspecto cuadrada */
+    object-fit: cover; /* Cubrir el contenedor sin deformarse */
     border-bottom: 1px solid #ddd;
-    background-color: #f8f9fa; /* Fondo para los bordes vacíos (opcional) */
+    background-color: #f8f9fa; /* Fondo para los bordes vacíos */
+    max-height: 200px; /* Limitar la altura máxima de las imágenes */
 }
 
 /* Título, descripción y precio */
@@ -126,38 +127,29 @@ header h1 {
     font-size: 1.2rem;
     color: #66b147;
     margin-top: 10px;
-    padding: 0 10px; /* Espaciado dentro del contenedor */
-    text-align: left; /* Alineación del título */
+    padding: 0 10px;
+    text-align: left;
 }
 
 .hortaliza p {
     color: #555;
     font-size: 0.9rem;
-    padding: 0 10px; /* Espaciado dentro del contenedor */
-    text-align: left; /* Alineación de la descripción */
+    padding: 0 10px;
+    text-align: left;
 }
 
 .precio {
     font-weight: bold;
     color: #28a745;
     margin-top: 10px;
-    padding: 0 10px; /* Espaciado dentro del contenedor */
-    text-align: left; /* Alineación del precio */
-}
-
-/* Modo oscuro */
-.bg-dark {
-    background-color: #343a40 !important;
-}
-
-.text-white {
-    color: #fff !important;
+    padding: 0 10px;
+    text-align: left;
 }
 
 /* Estilo personalizado para los afiches */
 #afiches {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres afiches por fila en pantallas grandes */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
     box-sizing: border-box;
@@ -165,8 +157,8 @@ header h1 {
 }
 
 #afiches .afiche {
-    width: 408px; /* Establecer un ancho fijo de 408px para los afiches */
-    height: 612px; /* Establecer una altura fija de 612px para los afiches */
+    width: 408px;
+    height: 612px;
     background-color: #f0f0f0;
     border-radius: 8px;
     overflow: hidden;
@@ -184,34 +176,27 @@ header h1 {
 
 #afiches .afiche img {
     width: 100%;
-    height: 100%;  /* Permitir que la imagen ocupe todo el espacio disponible */
-    object-fit: contain; /* Asegura que la imagen se mantenga proporcional y se ajuste sin recortarse */
+    height: 100%;
+    object-fit: contain;
 }
 
 /* Estilo de la flecha en el carrusel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #000; /* Color de la flecha */
-    border-radius: 50%; /* Para darle forma redonda */
-    width: 40px; /* Ancho de la flecha */
-    height: 40px; /* Alto de la flecha */
-    border: 3px solid #000; /* Aumentar grosor del borde de la flecha */
-}
-
-/* Flecha en modo oscuro */
-.bg-dark .carousel-control-prev-icon,
-.bg-dark .carousel-control-next-icon {
-    background-color: #000000; /* Flecha blanca en el modo oscuro */
-    border: 3px solid #ffffff; /* Borde blanco en el modo oscuro */
+    background-color: #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #000;
 }
 
 /* Modificar el tamaño y grosor de las flechas en dispositivos pequeños */
 @media (max-width: 768px) {
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
-        width: 50px; /* Aumentar tamaño de la flecha en pantallas pequeñas */
-        height: 50px; /* Aumentar altura de la flecha en pantallas pequeñas */
-        border-width: 4px; /* Grosor adicional para las flechas en pantallas pequeñas */
+        width: 50px;
+        height: 50px;
+        border-width: 4px;
     }
 }
 
@@ -219,25 +204,26 @@ header h1 {
 @media (max-width: 768px) {
     /* Ajustes para los afiches */
     #afiches {
-        grid-template-columns: repeat(2, 1fr); /* Dos afiches por fila en pantallas pequeñas */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     /* Ajustes para los afiches individuales */
     #afiches .afiche {
-        width: 250px; /* Ajustar el tamaño para pantallas pequeñas */
-        height: 375px; /* Ajustar la altura proporcionalmente */
+        width: 250px;
+        height: 375px;
     }
 
     /* Ajustes para botones de redes sociales */
     .redes-sociales .btn {
-        width: 100px; /* Tamaño más pequeño para pantallas pequeñas */
-        height: 35px; /* Ajustar altura en pantallas pequeñas */
+        width: 100px;
+        height: 35px;
         font-size: 0.8rem;
     }
 
     /* Ajustes para productos */
     .hortaliza img {
-        height: 150px; /* Reducir altura en pantallas pequeñas */
+        aspect-ratio: 1 / 1; /* Mantener relación cuadrada en móviles */
+        max-height: 150px; /* Reducir altura máxima en móviles */
     }
 
     .hortaliza h2 {
@@ -249,70 +235,53 @@ header h1 {
     }
 
     .precio {
-        font-size: 1rem; /* Asegurar que el precio sea legible */
+        font-size: 1rem;
     }
 
     /* Contenedor de productos ajustado para pantallas pequeñas */
     #productos {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
-        gap: 15px; /* Espaciado entre productos */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 10px;
     }
 
     /* Asegurar que los afiches en el carrusel ocupen toda la pantalla */
     #carouselAfiches .carousel-item img {
-        width: 100%; /* Expandir la imagen al 100% del ancho */
-        height: auto; /* Mantener proporciones */
+        width: 100%;
+        height: auto;
     }
 
     #carouselAfiches {
-        max-width: 100%; /* Asegurar que el carrusel no se salga de la pantalla */
+        max-width: 100%;
     }
 
     #carouselAfiches .carousel-inner {
-        display: flex; /* Asegurar alineación */
-        align-items: center; /* Centrar verticalmente */
+        display: flex;
+        align-items: center;
     }
 }
 
-/* Estilo para los botones de WhatsApp y correo */
-.btn-whatsapp {
-    background-color: #25D366; /* Color de fondo de WhatsApp */
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    display: inline-flex;
+/* Estilos minimalistas para botones de contacto */
+.btn-outline-light {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    text-align: left;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, transform 0.3s;
+    gap: 8px;
 }
 
-.btn-whatsapp:hover {
-    background-color: #128C7E; /* Color de fondo en hover */
-    transform: translateY(-5px); /* Efecto de elevación */
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #000;
 }
 
-.btn-email {
-    background-color: #EA4335; /* Color de fondo de Gmail */
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn-email:hover {
-    background-color: #D93025; /* Color de fondo en hover */
-    transform: translateY(-5px); /* Efecto de elevación */
-}
-
-.btn i {
-    margin-right: 8px; /* Espacio entre el icono y el texto */
-    font-size: 1.2rem;
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.9rem;
 }
