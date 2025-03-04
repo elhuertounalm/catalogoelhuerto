@@ -1,15 +1,15 @@
 [
   {
     "nombre": "Acelga",
-    "descripcion": "Acelga fresca y saludable.",
+    "descripcion": "Atado",
     "precio": "S/3.00",
-    "categoria": "hortalizas",
+    "categoria": "hortalizas.",
     "imagen": "img/productos/acelga.jpg",
     "disponible": true
   },
   {
     "nombre": "Albahaca",
-    "descripcion": "Acelga fresca y saludable.",
+    "descripcion": "Atado.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/Albahaca.jpg",
@@ -17,7 +17,7 @@
   },
   {
     "nombre": "Arugula",
-    "descripcion": "Arugula fresca y saludable.",
+    "descripcion": "Atado.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/arugula.jpg",
@@ -33,7 +33,7 @@
   },
   {
     "nombre": "Col Blanca",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Unidad.",
     "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/colblanca.jpeg",
@@ -41,7 +41,7 @@
   },
   {
     "nombre": "Espinaca",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/espinaca.png",
@@ -49,15 +49,15 @@
   },
   {
     "nombre": "Aji amarillo",
-    "descripcion": "fresca y saludable.",
-    "precio": "S/3.00",
+    "descripcion": "Bolsa.",
+    "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/ajiamarillo.webp",
     "disponible": true
   },
   {
     "nombre": "Almaciguera",
-    "descripcion": "80 plantines.",
+    "descripcion": "Bandeja de 80 plantines.",
     "precio": "S/35.00",
     "categoria": "biohuerto",
     "imagen": "img/productos/almacigos.jpg",
@@ -65,7 +65,7 @@
   },
   {
     "nombre": "Apio",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/apio.jpg",
@@ -73,7 +73,7 @@
   },
   {
     "nombre": "Betarraga",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/beterraga.jpg",
@@ -81,7 +81,7 @@
   },
   {
     "nombre": "Hierbas frescas",
-    "descripcion": "atado.",
+    "descripcion": "Atado.",
     "precio": "S/2.00",
     "categoria": "Herbaceas",
     "imagen": "img/productos/hierbasfrescas.jpg",
@@ -89,7 +89,7 @@
   },
   {
     "nombre": "hierbas mix infusión y cocina",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado.",
     "precio": "S/3.00",
     "categoria": "Herbaceas",
     "imagen": "img/productos/hierbasmixinfusionycocina.jpg",
@@ -97,7 +97,7 @@
   },
   {
     "nombre": "Kale",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/kale.jpg",
@@ -105,7 +105,7 @@
   },
   {
     "nombre": "Lechuga",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Unidad.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/lechuga.jpg",
@@ -113,7 +113,7 @@
   },
   {
     "nombre": "Lechuga mix",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Bolsa.",
     "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/lechugamix.webp",
@@ -121,7 +121,7 @@
   },
   {
     "nombre": "Moringa",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Bolsa.",
     "precio": "S/5.00",
     "categoria": "Herbaceas",
     "imagen": "img/productos/moringa.jpg",
@@ -129,7 +129,7 @@
   },
   {
     "nombre": "Nabo",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/nabo.jpg",
@@ -137,15 +137,15 @@
   },
   {
     "nombre": "Pepino holandez",
-    "descripcion": "fresca y saludable.",
-    "precio": "S/3.00",
+    "descripcion": "Unidad.",
+    "precio": "S/2.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/pepinoholandes.jpg",
     "disponible": true
   },
   {
     "nombre": "Pepino pickles",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Unidad.",
     "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/pepinopickles.jpg",
@@ -153,7 +153,7 @@
   },
   {
     "nombre": "Pimiento",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Unidad.",
     "precio": "S/1.50",
     "categoria": "hortalizas",
     "imagen": "img/productos/pimiento.jpg",
@@ -177,7 +177,7 @@
   },
   {
     "nombre": "Tomate",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Malla por kilo.",
     "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/tomate.jpg",
@@ -185,7 +185,7 @@
   },
   {
     "nombre": "Verduras micro mix",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Pet.",
     "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/verdurasmicromix.webp",
@@ -193,7 +193,7 @@
   },
   {
     "nombre": "Zanahoria",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Mllas por kilo.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/zanahoria.jpg",
@@ -201,7 +201,7 @@
   },
   {
     "nombre": "Zapallo criollo",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "kilo.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/zapallocriollo.webp",
@@ -209,7 +209,7 @@
   },
   {
     "nombre": "Brocoli",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Unidad.",
     "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/brocoli.jpg",
@@ -217,7 +217,7 @@
   },
   {
     "nombre": "Coliflor",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Unidad.",
     "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/coliflor.webp",
@@ -225,7 +225,7 @@
   },
   {
     "nombre": "Poro",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/poro.jpg",
@@ -233,7 +233,7 @@
   },
   {
     "nombre": "Zapallo Macre",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Kilo.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/zapallomacre.jpg",
@@ -241,7 +241,7 @@
   },
   {
     "nombre": "Chayote",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Unidad.",
     "precio": "S/2.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/chayote.jpg",
@@ -249,7 +249,7 @@
   },
   {
     "nombre": "Rabanito",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/Rabanito.jpg",
@@ -257,7 +257,7 @@
   },
   {
     "nombre": "Ajo Chino",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/ajochino.jpg",
@@ -265,7 +265,7 @@
   },
   {
     "nombre": "Esparrago",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/esparrago.jpg",
@@ -273,7 +273,7 @@
   },
   {
     "nombre": "Negui",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Atado",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/negui.jpg",
@@ -281,15 +281,15 @@
   },
   {
     "nombre": "Rocoto",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "Bolsa",
     "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/rocoto.gif",
     "disponible": true
   },
   {
-    "nombre": "Tomate Cherry Pet",
-    "descripcion": "fresca y saludable.",
+    "nombre": "Tomate Cherry",
+    "descripcion": "Pet",
     "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/tomatecherrypet.jpg",
@@ -297,15 +297,15 @@
   },
   {
     "nombre": "Manzana",
-    "descripcion": "fresca y saludable.",
+    "descripcion": "kilo",
     "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/manzana.webp",
     "disponible": true
   },
   {
-    "nombre": "Fresa Pet",
-    "descripcion": "fresca y saludable.",
+    "nombre": "Fresa",
+    "descripcion": "Pet",
     "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/fresapet.jpg",
@@ -313,7 +313,7 @@
   },
   {
     "nombre": "Berenjena",
-    "descripcion": "Berenjena organica.",
+    "descripcion": "Unidad",
     "precio": "S/1.50",
     "categoria": "frutas",
     "imagen": "img/productos/berenjena.jpg",
