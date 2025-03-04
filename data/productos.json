@@ -40,11 +40,11 @@
     "disponible": true
   },
   {
-    "nombre": "Kale",
+    "nombre": "Espinaca",
     "descripcion": "fresca y saludable.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
-    "imagen": "img/productos/kale.jpg",
+    "imagen": "img/productos/espinaca.png",
     "disponible": true
   },
   {
@@ -76,7 +76,7 @@
     "descripcion": "fresca y saludable.",
     "precio": "S/3.00",
     "categoria": "hortalizas",
-    "imagen": "img/productos/betarraga.jpg",
+    "imagen": "img/productos/beterraga.jpg",
     "disponible": true
   },
   {
@@ -148,7 +148,7 @@
     "descripcion": "fresca y saludable.",
     "precio": "S/5.00",
     "categoria": "hortalizas",
-    "imagen": "img/productos/pepinopickles.webp",
+    "imagen": "img/productos/pepinopickles.jpg",
     "disponible": true
   },
   {
@@ -178,7 +178,7 @@
   {
     "nombre": "Tomate",
     "descripcion": "fresca y saludable.",
-    "precio": "S/7.50",
+    "precio": "S/5.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/tomate.jpg",
     "disponible": true
@@ -194,7 +194,7 @@
   {
     "nombre": "Zanahoria",
     "descripcion": "fresca y saludable.",
-    "precio": "S/3.50",
+    "precio": "S/3.00",
     "categoria": "hortalizas",
     "imagen": "img/productos/zanahoria.jpg",
     "disponible": true
@@ -202,9 +202,113 @@
   {
     "nombre": "Zapallo criollo",
     "descripcion": "fresca y saludable.",
-    "precio": "S/3.50",
+    "precio": "S/3.00",
     "categoria": "hortalizas",
-    "imagen": "img/productos/zapallocriollo.png",
+    "imagen": "img/productos/zapallocriollo.webp",
+    "disponible": true
+  },
+  {
+    "nombre": "Brocoli",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/5.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/brocoli.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Coliflor",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/5.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/coliflor.webp",
+    "disponible": true
+  },
+  {
+    "nombre": "Poro",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/poro.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Zapallo Macre",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/zapallomacre.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Chayote",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/2.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/chayote.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Rabanito",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/Rabanito.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Ajo Chino",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/ajochino.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Esparrago",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/esparrago.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Negui",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/negui.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Rocoto",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/3.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/rocoto.gif",
+    "disponible": true
+  },
+  {
+    "nombre": "Tomate Cherry Pet",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/5.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/tomatecherrypet.jpg",
+    "disponible": true
+  },
+  {
+    "nombre": "Manzana",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/5.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/manzana.webp",
+    "disponible": true
+  },
+  {
+    "nombre": "Fresa Pet",
+    "descripcion": "fresca y saludable.",
+    "precio": "S/5.00",
+    "categoria": "hortalizas",
+    "imagen": "img/productos/fresapet.jpg",
     "disponible": true
   },
   {
