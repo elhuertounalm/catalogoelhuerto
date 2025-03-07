@@ -155,7 +155,7 @@
     "nombre": "Pimiento",
     "descripcion": "Unidad.",
     "precio": "S/1.50",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/pimiento.jpg",
     "disponible": true
   },
@@ -163,7 +163,7 @@
     "nombre": "Plantas",
     "descripcion": "Huaranguay, Estragon, Hierba buena, Mejorana, Menta comun, Menta negra, Oregano, Romero, Salvia, Aguaymanto, Lirio, Lengua de suegra y Nardo.",
     "precio": "S/10.00",
-    "categoria": "biohuerto",
+    "categoria": "Biohuerto",
     "imagen": "img/productos/plantas.jpg",
     "disponible": true
   },
@@ -171,7 +171,7 @@
     "nombre": "Tierra preparada",
     "descripcion": "Bolsa chica",
     "precio": "S/4.00",
-    "categoria": "biohuerto",
+    "categoria": "Biohuerto",
     "imagen": "img/productos/tierrapreparada.jpg",
     "disponible": true
   },
@@ -179,7 +179,7 @@
     "nombre": "Tomate",
     "descripcion": "Malla por kilo.",
     "precio": "S/5.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/tomate.jpg",
     "disponible": true
   },
@@ -187,7 +187,7 @@
     "nombre": "Verduras micro mix",
     "descripcion": "Pet.",
     "precio": "S/5.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/verdurasmicromix.webp",
     "disponible": true
   },
@@ -195,7 +195,7 @@
     "nombre": "Zanahoria",
     "descripcion": "Mllas por kilo.",
     "precio": "S/3.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/zanahoria.jpg",
     "disponible": true
   },
@@ -203,7 +203,7 @@
     "nombre": "Zapallo criollo",
     "descripcion": "kilo.",
     "precio": "S/3.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/zapallocriollo.webp",
     "disponible": true
   },
@@ -211,7 +211,7 @@
     "nombre": "Brocoli",
     "descripcion": "Unidad.",
     "precio": "S/5.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/brocoli.jpg",
     "disponible": true
   },
@@ -219,7 +219,7 @@
     "nombre": "Coliflor",
     "descripcion": "Unidad.",
     "precio": "S/5.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/coliflor.webp",
     "disponible": true
   },
@@ -227,7 +227,7 @@
     "nombre": "Poro",
     "descripcion": "Atado.",
     "precio": "S/3.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/poro.jpg",
     "disponible": true
   },
@@ -235,7 +235,7 @@
     "nombre": "Zapallo Macre",
     "descripcion": "Kilo.",
     "precio": "S/3.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/zapallomacre.jpg",
     "disponible": true
   },
@@ -243,7 +243,7 @@
     "nombre": "Chayote",
     "descripcion": "Unidad.",
     "precio": "S/2.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/chayote.jpg",
     "disponible": true
   },
@@ -251,7 +251,7 @@
     "nombre": "Rabanito",
     "descripcion": "Atado.",
     "precio": "S/3.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/Rabanito.jpg",
     "disponible": true
   },
@@ -259,7 +259,7 @@
     "nombre": "Ajo Chino",
     "descripcion": "Atado",
     "precio": "S/3.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/ajochino.jpg",
     "disponible": true
   },
@@ -267,7 +267,7 @@
     "nombre": "Esparrago",
     "descripcion": "Atado",
     "precio": "S/3.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/esparrago.jpg",
     "disponible": true
   },
@@ -275,7 +275,7 @@
     "nombre": "Negui",
     "descripcion": "Atado",
     "precio": "S/3.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/negui.jpg",
     "disponible": true
   },
@@ -283,7 +283,7 @@
     "nombre": "Rocoto",
     "descripcion": "Bolsa",
     "precio": "S/3.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/rocoto.gif",
     "disponible": true
   },
@@ -291,7 +291,7 @@
     "nombre": "Tomate Cherry",
     "descripcion": "Pet",
     "precio": "S/5.00",
-    "categoria": "hortalizas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/tomatecherrypet.jpg",
     "disponible": true
   },
@@ -299,7 +299,7 @@
     "nombre": "Manzana",
     "descripcion": "kilo",
     "precio": "S/5.00",
-    "categoria": "hortalizas",
+    "categoria": "Frutas",
     "imagen": "img/productos/manzana.webp",
     "disponible": true
   },
@@ -307,7 +307,7 @@
     "nombre": "Fresa",
     "descripcion": "Pet",
     "precio": "S/5.00",
-    "categoria": "hortalizas",
+    "categoria": "Frutas",
     "imagen": "img/productos/fresapet.jpg",
     "disponible": true
   },
@@ -315,7 +315,7 @@
     "nombre": "Berenjena",
     "descripcion": "Unidad",
     "precio": "S/1.50",
-    "categoria": "frutas",
+    "categoria": "Hortalizas",
     "imagen": "img/productos/berenjena.jpg",
     "disponible": true
   }
